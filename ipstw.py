@@ -83,7 +83,7 @@ class SSD1306:
       # displays with width of 64 pixels are shifted by 32
       x0 += 32
       x1 += 32
-      '''
+      
     self.write_cmd(SET_COL_ADDR)
     self.write_cmd(x0)
     self.write_cmd(x1)
@@ -91,7 +91,7 @@ class SSD1306:
     self.write_cmd(0)
     self.write_cmd(self.pages - 1)
     self.write_data(self.buffer)
-    '''
+    
   def fill(self, col):
     self.framebuf.fill(col)
   def pixel(self, x, y, col):
